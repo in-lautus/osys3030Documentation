@@ -1,0 +1,24 @@
+; BIND data file for sysninja
+;
+$TTL 14400
+@ IN SOA ns1.sysninja. host.sysninja. (
+201006601 ; Serial
+7200 ; Refresh
+120 ; Retry
+2419200 ; Expire
+604800) ; Default TTL
+;
+sysninja. IN NS ns1.sysninja.
+sysninja.com. IN NS ns2.sysninja.com.
+
+sysninja.com. IN MX 10 mail.sysninja.
+sysninja. IN A 192.168.200.243
+
+ns1 IN A 192.168.200.243
+ns2 IN A 192.168.200.243
+www IN CNAME sysninja.
+mail IN A 192.168.200.243
+ftp IN CNAME sysninja.
+*. IN CNAME sysninja
+sysninja. IN TXT "v=spf1 ip4:192.168.200.243 a mx ~all"
+mail IN TXT "v=spf1 a -all"
