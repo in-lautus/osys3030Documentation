@@ -1,0 +1,9 @@
+@ IN SOA domain.com. host.domain.com. (
+2010081401;
+28800;
+604800;
+604800;
+86400 );
+ 
+IN NS ns1.sysninja.
+4 IN PTR sysninja.
